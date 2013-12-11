@@ -26,4 +26,8 @@ class Genre
     GENRES.clear
   end
 
+  def self.search_all genre
+    GENRES.detect {|defined_genre| defined_genre.name == genre}
+  end
+
 end

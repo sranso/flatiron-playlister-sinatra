@@ -1,17 +1,14 @@
 <h1>
-  <%= @genre.capitalize %>
+  <%= @genre %> - <%= @genre_obj.songs.size %> Songs
 </h1>
 <h2>
-  <%= @genre_obj.songs.size %> Songs
-</h2>
-<h3>
   <ol>
     <% @genre_obj.songs.each do |song| %>
       <li>
-        <a href = "<%= song.name.gsub(" ", "_") %>">
-          <%= song.name %>
+        <a href = "<%= song.title.gsub(" ", "_") %>">
+          <%= song.title %>
         </a>
       </li>
     <% end %>
   </ol>
-</h3>
+</h2>

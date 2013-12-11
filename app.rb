@@ -24,6 +24,8 @@ class PlaylistApp < Sinatra::Application
   end
 
   get '/artists/:a_name' do
+    @artist = params[:a_name].gsub("_", " ")
+    @artist_obj = ::Artist.search_all(@artist)
     erb :artist
   end
 
@@ -32,6 +34,8 @@ class PlaylistApp < Sinatra::Application
   end
 
   get '/genres/:g_name' do
+    @genre = params[:g_name].gsub("_", " ")
+    @genre_obj = ::Genre.search_all(@genre)
     erb :genre
   end
 

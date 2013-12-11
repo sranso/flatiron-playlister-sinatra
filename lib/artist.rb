@@ -33,5 +33,9 @@ class Artist
       song.genre.artists << self 
     end
   end
+
+  def self.search_all artist
+    ARTISTS.detect {|defined_artist| defined_artist.name == artist}
+  end
   
 end

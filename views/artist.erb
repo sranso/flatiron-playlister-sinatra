@@ -1,11 +1,12 @@
 <h1>
-  <%= @artists %> - <%= @artist_obj.songs_count %> Songs
+  <%= @artist %> - <%= @artist_obj.songs_count %> Songs
 </h1>
 <h2>
   <ol>
     <% @artist_obj.songs.each do |song| %>
       <li>
-        <%= song.name %>
+        <a href = "<%= song.title.gsub(" ", "_") %>">
+          <%= song.title %>
       </li>
     <% end %>
   </ol>
