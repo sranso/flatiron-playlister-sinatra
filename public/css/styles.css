@@ -1,0 +1,47 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.navbar {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.navbar a {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+#home a {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+#home .homenav {
+  text-align: center;
+}
+
+.homenav {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 12px;
+  padding-left: 12px;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+h3 {
+  line-height: 0.5;
+  font-size: 20px;
+}
+
+ol {
+  margin-left: 20%;
+}

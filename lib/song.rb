@@ -1,13 +1,13 @@
 class Song
-  attr_accessor :title, :artist
+  attr_accessor :title, :artist, :genre
   attr_reader :genre
 
   SONGS = []
 
   def initialize(title, artist)
     @title = title
-    @genre
     @artist = artist
+    @genre
     SONGS << self
   end
 
@@ -20,7 +20,7 @@ class Song
     SONGS
   end
 
-  def self.search_all song
+  def self.search_all(song)
     SONGS.detect {|defined_song| defined_song.title == song}
   end
 

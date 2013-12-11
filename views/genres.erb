@@ -1,6 +1,15 @@
+<div class="navbar">
+  <a class="homenav" href="/home">Playlister</a>
+  <a href="/artists">Artists</a>
+  <a href="/genres">Genres</a>
+  <a href="/songs">Songs</a>
+  <p>
+</div>
+
 <h1>
-  Genres - <%= @genres.size %> Total
+  Genres
 </h1>
+<h3><%= @genres.size %> Total</h3>
 <p>
   <ol>
     <% @genres.each do |genre| %>

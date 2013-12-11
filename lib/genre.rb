@@ -1,6 +1,7 @@
 class Genre
-
+  attr_reader :songs, :artists
   attr_accessor :name
+
   GENRES = []
 
   def initialize(name)
@@ -8,14 +9,6 @@ class Genre
     @songs = []
     @artists = []
     GENRES << self
-  end
-
-  def songs
-    @songs
-  end
-
-  def artists
-    @artists
   end
 
   def self.all
@@ -26,7 +19,7 @@ class Genre
     GENRES.clear
   end
 
-  def self.search_all genre
+  def self.search_all(genre)
     GENRES.detect {|defined_genre| defined_genre.name == genre}
   end
 

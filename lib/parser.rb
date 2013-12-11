@@ -1,14 +1,13 @@
 class Parser
-  attr_accessor :artist_array
 
   def initialize
     Dir["./public/data/*.mp3"].each do |file|
       new_file = file[14..-6].split(" - ")
-      @artist_array = Artist.all.select {|artist| artist.name == new_file[0]}
-      if @artist_array.size == 0
+      artist_array = Artist.all.select {|artist| artist.name == new_file[0]}
+      if artist_array.size == 0
         new_artist = Artist.new(new_file[0])
       else
-        new_artist = @artist_array[0]
+        new_artist = artist_array[0]
       end
       song_genre = new_file[1].split(" [")
       new_song = Song.new(song_genre[0], new_artist.name) #create new song

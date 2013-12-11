@@ -1,5 +1,5 @@
 class Artist
-  attr_accessor :name, :songs, :genres, :count
+  attr_reader :name, :songs, :genres
 
   ARTISTS = []
 
@@ -22,10 +22,6 @@ class Artist
     ARTISTS
   end
 
-  def songs_count
-    songs.size
-  end
-
   def add_song(song)
     songs << song
     genres << song.genre
@@ -34,7 +30,7 @@ class Artist
     end
   end
 
-  def self.search_all artist
+  def self.search_all(artist)
     ARTISTS.detect {|defined_artist| defined_artist.name == artist}
   end
   

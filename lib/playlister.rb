@@ -1,8 +1,6 @@
 require './lib/parser'
 class Playlister
 
-  # attr_accessor :all_artists, :all_songs, :all_genres
-
   def initialize
     Parser.new
   end
@@ -145,6 +143,3 @@ class Playlister
   end
 
 end
-
-# 1. create get_text method. text = gets.chomp.downcase. text.match(exit?) then exit. else return text
-# 3. object oriented programming... put methods in appropriate class
