@@ -17,21 +17,27 @@ p {
   display: inline-block;
 }
 
-#homelinks {
-  display: inline-block;
-  margin-left: 38%;
-  margin-top: 70px;
-  margin-right: auto;
-  width: 100%;
+#homelinks_container {
+  padding-top: 80px;
+  width: 500px;
+  margin: 0 auto;
+  display: block;
 }
 
-#homelinks a {
-  padding-right: 50px;
+.homelinks {
   display: inline-block;
   font-size: 30px;
+  width: 150px;
+  text-align: center;
 }
 
-#homelinks a:hover {
+.homelinks a {
+  padding: 25px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+}
+
+.homelinks a:hover {
   color: teal;
 }
 
@@ -63,24 +69,35 @@ ol {
   margin-left: 20%;
 }
 
+ol a:hover {
+  color: #CEDBDE;
+  text-decoration: none;
+}
+
 h3 {
   line-height: 0.5;
   font-size: 20px;
 }
 
-.listen {
-  color: #5F5F66;
-  text-align: center;
-  padding: 15px;
-  width: 80px;
+.listen_container {
+  width: 70px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 20px;
+}
+
+.listen a {
   display: inline-block;
-  margin-left: 45%;
-  background-color: #E1E1E8;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Bad Script', cursive;
+  font-size: 18px;
+  background-color: rgba(23, 23, 23, 0.4);
+  color: #5F5F66;
   border-radius: 15px;
 }
 
-.listen:hover {
-  background-color: #9FABC2;
+.listen a:hover {
   text-decoration: none;
   color: #D1D7E3;
 }

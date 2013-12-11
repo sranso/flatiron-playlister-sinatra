@@ -7,15 +7,27 @@
 </div>
 
 <h1>
-  <%= @artist %> - <%= @artist_obj.songs.size %> Songs
+  <%= @artist %>
 </h1>
-  <ol>
-    <% @artist_obj.songs.each do |song| %>
-      <li>
-        <a href = "/songs/<%= song.title.gsub(" ", "_") %>">
-          <%= song.title %>
-      </li>
-    <% end %>
-  </ol>
 
-<a class="listen" href="https://myspace.com/<%=@artist.gsub(" ", "")%>/music/songs" target="_blank">Listen</a>
+<h3>
+  <%= @artist_obj.songs.size %> Songs
+</h3>
+
+<ol>
+  <% @artist_obj.songs.each do |song| %>
+    <li>
+      <a href = "/songs/<%= song.title.gsub(" ", "_") %>">
+        <%= song.title %>
+      </a>
+    </li>
+  <% end %>
+</ol>
+
+<div class="listen_container">
+  <div class="listen">
+    <a href="https://myspace.com/<%=@artist.gsub(" ", "")%>/music/songs" target="_blank">
+      Listen
+    </a>
+  </div>
+</div>

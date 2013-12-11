@@ -7,5 +7,18 @@
 </div>
 
 <h1>
-  <em><%= @song %></em> by <a href="/artists/<%= @song_obj.artist.gsub(" ", "_") %>"><%= @song_obj.artist %></a>
+  <em><%= @song %></em>
 </h1>
+<h3>
+  by <a href="/artists/<%= @song_obj.artist.gsub(" ", "_") %>">
+    <%= @song_obj.artist %>
+  </a>
+</h3>
+
+<div class="listen_container">
+  <div class="listen">
+    <a href="https://myspace.com/<%=@song_obj.artist.gsub(" ", "")%>/music/song/<%=@song.gsub(" ", "")%>" target="_blank">
+      Listen
+    </a>
+  </div>
+</div>
