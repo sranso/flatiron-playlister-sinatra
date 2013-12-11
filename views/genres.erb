@@ -1,0 +1,15 @@
+<h1>
+  Genres - <%= @genres.size %> Total
+</h1>
+<p>
+  <ol>
+    <% @genres.each do |genre| %>
+      <li>
+        <a href="genres/<%= genre.name.gsub(" ", "_") %>">
+          <%= genre.name %>
+        </a>
+      </li>
+      <br>
+    <% end %>
+  </ol>
+</p>
