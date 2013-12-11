@@ -9,7 +9,6 @@
 <h1>
   <%= @artist %> - <%= @artist_obj.songs.size %> Songs
 </h1>
-<h2>
   <ol>
     <% @artist_obj.songs.each do |song| %>
       <li>
@@ -18,4 +17,5 @@
       </li>
     <% end %>
   </ol>
-</h2>
+
+<a class="listen" href="https://myspace.com/<%=@artist.gsub(" ", "")%>/music/songs" target="_blank">Listen</a>
