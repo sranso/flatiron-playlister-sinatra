@@ -20,4 +20,8 @@ class Song
     SONGS
   end
 
+  def self.search_all song
+    SONGS.detect {|defined_song| defined_song.title == song}
+  end
+
 end

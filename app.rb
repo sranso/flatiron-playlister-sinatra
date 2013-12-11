@@ -43,7 +43,9 @@ class PlaylistApp < Sinatra::Application
     erb :songs
   end
 
-  get '/song' do
+  get '/songs/:s_title' do
+    @song = params[:s_title].gsub("_", " ")
+    @song_obj = ::Song.search_all(@song)
     erb :song
   end
 

@@ -1,0 +1,15 @@
+<h1>
+  Songs - <%= @songs.size %>  Total
+</h1>
+<p>
+  <ol>
+    <% @songs.each do |song| %>
+      <li>
+        <a href="/songs/<%= song.title.gsub(" ", "_") %>">
+          <%= song.title %>
+        </a>
+      </li>
+      <br>
+    <% end %>
+  </ol>
+</p>

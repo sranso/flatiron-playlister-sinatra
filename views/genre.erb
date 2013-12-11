@@ -5,7 +5,7 @@
   <ol>
     <% @genre_obj.songs.each do |song| %>
       <li>
-        <a href = "<%= song.title.gsub(" ", "_") %>">
+        <a href = "/songs/<%= song.title.gsub(" ", "_") %>">
           <%= song.title %>
         </a>
       </li>
