@@ -28,9 +28,9 @@ class PlaylistApp < Sinatra::Application
   get '/artists/:a_name' do
     @artist = params[:a_name].gsub("_", " ")
     @artist_obj = ::Artist.search_all(@artist)
-    @download = open("http://ws.spotify.com/search/1/artist?q=#{@artist}").read
-    @html = Nokogiri::XML(@download)
-    @artist_uri = @html.search("artist")[0]["href"]
+    @download = open("http://ws.spotify.com/search/1/artist?q=#{@artist.gsub(" ", "_").gsub("$", "s")}").read
+    @xml = Nokogiri::XML(@download)
+    @artist_uri = @xml.search("artist")[0]["href"]
     erb :artist
   end
 
@@ -51,6 +51,9 @@ class PlaylistApp < Sinatra::Application
   get '/songs/:s_title' do
     @song = params[:s_title].gsub("_", " ")
     @song_obj = ::Song.search_all(@song)
+    @download = open("http://ws.spotify.com/search/1/track?q=#{@song.gsub(" ", "_")}").read
+    @xml = Nokogiri::XML(@download)
+    @song_uri = @xml.search("track")[0]["href"]
     erb :song
   end
 
