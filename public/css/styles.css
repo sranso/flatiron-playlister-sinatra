@@ -4,6 +4,7 @@ body {
   background: url(/img/low_contrast_linen.png) repeat;
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
+  line-height: 1;
 }
 
 p {
@@ -28,8 +29,9 @@ p {
 .homelinks {
   display: inline-block;
   font-size: 30px;
-  width: 150px;
+  width: 110px;
   text-align: center;
+  margin: 27px;
 }
 
 .homelinks a {
@@ -72,10 +74,6 @@ h3 {
   opacity: 0.6;
 }
 
-li {
-  color: #636C78;
-}
-
 ol {
   margin-left: 20%;
 }
@@ -83,6 +81,11 @@ ol {
 ol a:hover {
   color: #CEDBDE;
   text-decoration: none;
+}
+
+li {
+  color: #636C78;
+  line-height: 1.1;
 }
 
 .listen_container {
