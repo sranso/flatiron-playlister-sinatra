@@ -10,11 +10,11 @@
   Artists
 </h1>
 <h3>
-  <%= @artists.size %>  Total
+  <%= ::Artist.all.size %>  Total
 </h3>
 <p>
   <ol>
-    <% @artists.each do |artist| %>
+    <% ::Artist.all.each do |artist| %>
       <li>
         <a href="artists/<%= artist.name.gsub(" ", "_") %>">
           <%= artist.name %>

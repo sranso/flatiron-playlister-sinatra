@@ -9,13 +9,7 @@ require 'bundler'
 Bundler.require
 
 class PlaylistApp < Sinatra::Application
-
-  before do
-    @playlister = Playlister.new
-    @artists = @playlister.all_artists
-    @genres = @playlister.all_genres
-    @songs = @playlister.all_songs
-  end
+  Playlister.new
 
   get '/home' do
     erb :home

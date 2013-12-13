@@ -9,10 +9,10 @@
 <h1>
   Genres
 </h1>
-<h3><%= @genres.size %> Total</h3>
+<h3><%= ::Genre.all.size %> Total</h3>
 <p>
   <ol>
-    <% @genres.each do |genre| %>
+    <% ::Genre.all.each do |genre| %>
       <li>
         <a href="genres/<%= genre.name.gsub(" ", "_") %>">
           <%= genre.name %>
