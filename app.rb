@@ -11,7 +11,7 @@ Bundler.require
 class PlaylistApp < Sinatra::Application
   Playlister.new
 
-  get '/home' do
+  get '/' do
     erb :home
   end
 
