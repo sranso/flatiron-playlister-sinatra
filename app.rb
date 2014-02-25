@@ -5,10 +5,26 @@ require './lib/song'
 require './lib/genre'
 require 'open-uri'
 require 'nokogiri'
+require 'debugger'
+
 require 'bundler'
 Bundler.require
 
 class PlaylistApp < Sinatra::Application
+  configure do
+    Compass.configuration do |config|
+      config.project_path = File.dirname(__FILE__)
+      config.sass_dir = 'views'
+    end
+
+    set :erb, { :format => :html5 }
+    set :scss, Compass.sass_engine_options
+  end
+
+  get '/output.css' do
+    scss :input
+  end
+
   Playlister.new
 
   get '/' do
@@ -39,6 +55,8 @@ class PlaylistApp < Sinatra::Application
   end
 
   get '/songs' do
+    # debugger
+    @songs = ::Song.all
     erb :songs
   end
 
