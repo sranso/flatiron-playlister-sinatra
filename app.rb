@@ -5,7 +5,6 @@ require './lib/song'
 require './lib/genre'
 require 'open-uri'
 require 'nokogiri'
-require 'debugger'
 
 require 'bundler'
 Bundler.require
