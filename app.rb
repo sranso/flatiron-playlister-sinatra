@@ -55,7 +55,6 @@ class PlaylistApp < Sinatra::Application
   end
 
   get '/songs' do
-    # debugger
     @songs = ::Song.all
     erb :songs
   end
